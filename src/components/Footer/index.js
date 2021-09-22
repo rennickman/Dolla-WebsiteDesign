@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaFacebook, FaTwitter, FaYoutube, FaLinkedin, FaInstagram } from 'react-icons/fa';
+import { animateScroll as scroll } from 'react-scroll';
 
 import { FooterContainer, FooterLinkItems, FooterLinksContainer, FooterLink, FooterLinksWrapper, 
     FooterLinkTitle, FooterWrap, SocialMedia, SocialMediaWrap, SocialLogo, WebsiteRights, SocialIcons, SocialIconLink } from './FooterElements';
@@ -8,6 +9,11 @@ import { FooterContainer, FooterLinkItems, FooterLinksContainer, FooterLink, Foo
 
 
 const Footer = () => {
+
+// Method to scroll to the top of the screen
+    const toggleHome = () => {
+        scroll.scrollToTop();
+    };
 
     return (
         <>
@@ -57,7 +63,7 @@ const Footer = () => {
                     <SocialMedia>
                         <SocialMediaWrap>
                             {/* Logo */}
-                            <SocialLogo to="/">
+                            <SocialLogo to="/" onClick={toggleHome}>
                                 dolla
                             </SocialLogo>
 
